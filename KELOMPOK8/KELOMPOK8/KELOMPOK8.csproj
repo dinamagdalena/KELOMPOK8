@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A2AC8D7D-07C7-4BDD-A03C-974A10E61025}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KELOMPOK8</RootNamespace>
+    <AssemblyName>KELOMPOK8</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="controlCheckIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlCheckIn.Designer.cs">
+      <DependentUpon>controlCheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controlCheckOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlCheckOut.Designer.cs">
+      <DependentUpon>controlCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controlFasilitasHotel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlFasilitasHotel.Designer.cs">
+      <DependentUpon>controlFasilitasHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controlFasilitasKamar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlFasilitasKamar.Designer.cs">
+      <DependentUpon>controlFasilitasKamar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controlKamar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlKamar.Designer.cs">
+      <DependentUpon>controlKamar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controlKaryawan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlKaryawan.Designer.cs">
+      <DependentUpon>controlKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controlKategoriKamar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlKategoriKamar.Designer.cs">
+      <DependentUpon>controlKategoriKamar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controlLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlLogin.Designer.cs">
+      <DependentUpon>controlLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBackOffice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBackOffice.Designer.cs">
+      <DependentUpon>FormBackOffice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFO.Designer.cs">
+      <DependentUpon>FormFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="controlCheckIn.resx">
+      <DependentUpon>controlCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlCheckOut.resx">
+      <DependentUpon>controlCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlFasilitasHotel.resx">
+      <DependentUpon>controlFasilitasHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlFasilitasKamar.resx">
+      <DependentUpon>controlFasilitasKamar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlKamar.resx">
+      <DependentUpon>controlKamar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlKaryawan.resx">
+      <DependentUpon>controlKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlKategoriKamar.resx">
+      <DependentUpon>controlKategoriKamar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlLogin.resx">
+      <DependentUpon>controlLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBackOffice.resx">
+      <DependentUpon>FormBackOffice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFO.resx">
+      <DependentUpon>FormFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
