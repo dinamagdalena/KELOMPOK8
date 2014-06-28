@@ -36,9 +36,9 @@
             this.labelNamaKategori = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxNamaKategori = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textNamaKategori = new System.Windows.Forms.TextBox();
+            this.textFasilitas = new System.Windows.Forms.TextBox();
+            this.textIdFasilitas = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVKategoriKamar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +94,7 @@
             this.buttonTambah.TabIndex = 15;
             this.buttonTambah.Text = "Tambah";
             this.buttonTambah.UseVisualStyleBackColor = true;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // labelNamaKategori
             // 
@@ -125,35 +126,35 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Id Fasilitas  :";
             // 
-            // textBoxNamaKategori
+            // textNamaKategori
             // 
-            this.textBoxNamaKategori.Location = new System.Drawing.Point(148, 45);
-            this.textBoxNamaKategori.Name = "textBoxNamaKategori";
-            this.textBoxNamaKategori.Size = new System.Drawing.Size(376, 20);
-            this.textBoxNamaKategori.TabIndex = 21;
+            this.textNamaKategori.Location = new System.Drawing.Point(148, 45);
+            this.textNamaKategori.Name = "textNamaKategori";
+            this.textNamaKategori.Size = new System.Drawing.Size(376, 20);
+            this.textNamaKategori.TabIndex = 21;
             // 
-            // textBox1
+            // textFasilitas
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 22;
+            this.textFasilitas.Location = new System.Drawing.Point(148, 76);
+            this.textFasilitas.Name = "textFasilitas";
+            this.textFasilitas.Size = new System.Drawing.Size(200, 20);
+            this.textFasilitas.TabIndex = 22;
             // 
-            // textBox2
+            // textIdFasilitas
             // 
-            this.textBox2.Location = new System.Drawing.Point(446, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(78, 20);
-            this.textBox2.TabIndex = 23;
+            this.textIdFasilitas.Location = new System.Drawing.Point(446, 76);
+            this.textIdFasilitas.Name = "textIdFasilitas";
+            this.textIdFasilitas.Size = new System.Drawing.Size(78, 20);
+            this.textIdFasilitas.TabIndex = 23;
             // 
             // controlKategoriKamar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBoxNamaKategori);
+            this.Controls.Add(this.textIdFasilitas);
+            this.Controls.Add(this.textFasilitas);
+            this.Controls.Add(this.textNamaKategori);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelNamaKategori);
@@ -164,6 +165,7 @@
             this.Controls.Add(this.dataGVKategoriKamar);
             this.Name = "controlKategoriKamar";
             this.Size = new System.Drawing.Size(800, 500);
+            this.Load += new System.EventHandler(this.controlKategoriKamar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGVKategoriKamar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,8 +182,8 @@
         private System.Windows.Forms.Label labelNamaKategori;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxNamaKategori;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textNamaKategori;
+        private System.Windows.Forms.TextBox textFasilitas;
+        private System.Windows.Forms.TextBox textIdFasilitas;
     }
 }
