@@ -16,5 +16,13 @@ namespace KELOMPOK8
             InitializeComponent();
         }
 
+        private void buttonCheckIn_Click(object sender, EventArgs e)
+        {
+            string noktp = textBoxNoKtp.Text;
+            string nama = textBoxNamaIn.Text;
+            string notelp = textBoxNoTelp.Text;
+
+        }
+
     }
 }

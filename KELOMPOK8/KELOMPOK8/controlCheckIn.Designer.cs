@@ -213,6 +213,7 @@
             this.buttonCheckIn.TabIndex = 50;
             this.buttonCheckIn.Text = "CHECK IN";
             this.buttonCheckIn.UseVisualStyleBackColor = true;
+            this.buttonCheckIn.Click += new System.EventHandler(this.buttonCheckIn_Click);
             // 
             // controlCheckIn
             // 
