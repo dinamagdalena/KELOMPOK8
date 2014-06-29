@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGVKategoriKamar = new System.Windows.Forms.DataGridView();
             this.buttonHapus = new System.Windows.Forms.Button();
-            this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonUbah = new System.Windows.Forms.Button();
             this.buttonTambah = new System.Windows.Forms.Button();
             this.labelNamaKategori = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@
             this.dataGVKategoriKamar.Name = "dataGVKategoriKamar";
             this.dataGVKategoriKamar.Size = new System.Drawing.Size(761, 383);
             this.dataGVKategoriKamar.TabIndex = 10;
+            this.dataGVKategoriKamar.SelectionChanged += new System.EventHandler(this.dataGVKategoriKamar_SelectionChanged);
             // 
             // buttonHapus
             // 
@@ -72,17 +73,19 @@
             this.buttonHapus.TabIndex = 17;
             this.buttonHapus.Text = "Hapus";
             this.buttonHapus.UseVisualStyleBackColor = true;
+            this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
             // 
-            // buttonUpdate
+            // buttonUbah
             // 
-            this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(614, 45);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(76, 51);
-            this.buttonUpdate.TabIndex = 16;
-            this.buttonUpdate.Text = "Update";
-            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUbah.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUbah.Location = new System.Drawing.Point(614, 45);
+            this.buttonUbah.Name = "buttonUbah";
+            this.buttonUbah.Size = new System.Drawing.Size(76, 51);
+            this.buttonUbah.TabIndex = 16;
+            this.buttonUbah.Text = "Ubah";
+            this.buttonUbah.UseVisualStyleBackColor = true;
+            this.buttonUbah.Click += new System.EventHandler(this.buttonUbah_Click);
             // 
             // buttonTambah
             // 
@@ -159,7 +162,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelNamaKategori);
             this.Controls.Add(this.buttonHapus);
-            this.Controls.Add(this.buttonUpdate);
+            this.Controls.Add(this.buttonUbah);
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGVKategoriKamar);
@@ -177,7 +180,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGVKategoriKamar;
         private System.Windows.Forms.Button buttonHapus;
-        private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.Button buttonUbah;
         private System.Windows.Forms.Button buttonTambah;
         private System.Windows.Forms.Label labelNamaKategori;
         private System.Windows.Forms.Label label2;
