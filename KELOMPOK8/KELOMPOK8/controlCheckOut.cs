@@ -15,5 +15,12 @@ namespace KELOMPOK8
         {
             InitializeComponent();
         }
+
+        private void buttonCheckOut_Click(object sender, EventArgs e)
+        {
+            //show form 
+        }
+
+       
     }
 }

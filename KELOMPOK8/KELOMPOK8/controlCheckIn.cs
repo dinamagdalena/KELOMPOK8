@@ -60,11 +60,11 @@ namespace KELOMPOK8
                 //Checking insert result
                 if (insertResult == 1)
                 {
-                    MessageBox.Show("CheckIn Berhasil");
+                    MessageBox.Show("Check In Berhasil");
                 }
                 else
                 {
-                    MessageBox.Show("Checkin gagal silahkan ulangi");
+                    MessageBox.Show("Check in gagal silahkan ulangi");
                 }
 
                 //close connection

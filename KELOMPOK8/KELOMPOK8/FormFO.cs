@@ -15,5 +15,10 @@ namespace KELOMPOK8
         {
             InitializeComponent();
         }
+
+        private void flowLayoutPanelBackOffice_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
