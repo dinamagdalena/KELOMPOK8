@@ -15,6 +15,11 @@ namespace KELOMPOK8
     {
         //create connertion string 
         private string strConnection = ConfigurationManager.ConnectionStrings["DbHotelConnectionString"].ConnectionString;
+        private string noktp;
+        private string nama;
+        private string notelp;
+        private string jenis_kelamin;
+        private string no_kmr;
 
         public controlCheckIn()
         {
@@ -22,7 +27,7 @@ namespace KELOMPOK8
         }
 
         //Method for ckear form
-        private void ClearFprm()
+        private void ClearForm()
         {
             textBoxNamaIn.Text = "";
             textBoxNoKmr.Text = "";
@@ -31,11 +36,22 @@ namespace KELOMPOK8
             textBoxNoKtp.Focus();
         }
 
+        private void radioButtonLaki_CheckedChanged(object sender, EventArgs e)
+        {
+            jenis_kelamin = (sender as RadioButton).Text;
+        }
+
+        private void radioButtonPere_CheckedChanged(object sender, EventArgs e)
+        {
+            jenis_kelamin = (sender as RadioButton).Text;
+        }
+
         private void buttonCheckIn_Click(object sender, EventArgs e)
         {
-            string noktp = textBoxNoKtp.Text;
-            string nama = textBoxNamaIn.Text;
-            string notelp = textBoxNoTelp.Text;
+            noktp = textBoxNoKtp.Text;
+            nama = textBoxNamaIn.Text;
+            notelp = textBoxNoTelp.Text;
+            no_kmr = textBoxNoKmr.Text;
 
             SqlConnection connection = new SqlConnection(strConnection);
             using (connection)
@@ -45,7 +61,7 @@ namespace KELOMPOK8
 
                 //create Query
                 string insert = "INSERT INTO TPelanggan (NoKtp, NamaPelanggan, NoTelpPelanggan, JenisKelaminPelanggan) values(@NoKtp, @NamaPelanggan, @NoTelpPelanggan, @JenisKelaminPelanggan) ";
-                
+
                 //Isnert Data Into table
                 SqlCommand cmd = new SqlCommand(insert, connection);
 
@@ -53,6 +69,7 @@ namespace KELOMPOK8
                 cmd.Parameters.AddWithValue("@NoKtp", noktp);
                 cmd.Parameters.AddWithValue("@NamaPelanggan", nama);
                 cmd.Parameters.AddWithValue("@NoTelp", notelp);
+                cmd.Parameters.AddWithValue("@JenisKelaminPelanggan", jenis_kelamin);
 
                 // Execute Data
                 int insertResult = cmd.ExecuteNonQuery();
@@ -61,11 +78,14 @@ namespace KELOMPOK8
                 if (insertResult == 1)
                 {
                     MessageBox.Show("Check In Berhasil");
+                    ClearForm();
                 }
                 else
                 {
                     MessageBox.Show("Check in gagal silahkan ulangi");
                 }
+
+                
 
                 //close connection
                 connection.Close();

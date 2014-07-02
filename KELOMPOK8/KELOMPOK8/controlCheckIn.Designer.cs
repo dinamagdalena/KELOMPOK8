@@ -33,9 +33,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBoxJenisKmr = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBoxJenisKelamin = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxNoTelp = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,6 +44,11 @@
             this.textBoxNoKtp = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonCheckIn = new System.Windows.Forms.Button();
+            this.radioButtonLaki = new System.Windows.Forms.RadioButton();
+            this.radioButtonPere = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -94,15 +97,6 @@
             this.label10.TabIndex = 46;
             this.label10.Text = "No Telp";
             // 
-            // comboBoxJenisKmr
-            // 
-            this.comboBoxJenisKmr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxJenisKmr.FormattingEnabled = true;
-            this.comboBoxJenisKmr.Location = new System.Drawing.Point(175, 252);
-            this.comboBoxJenisKmr.Name = "comboBoxJenisKmr";
-            this.comboBoxJenisKmr.Size = new System.Drawing.Size(554, 24);
-            this.comboBoxJenisKmr.TabIndex = 45;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -112,15 +106,6 @@
             this.label7.Size = new System.Drawing.Size(86, 17);
             this.label7.TabIndex = 44;
             this.label7.Text = "Jenis Kamar";
-            // 
-            // comboBoxJenisKelamin
-            // 
-            this.comboBoxJenisKelamin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxJenisKelamin.FormattingEnabled = true;
-            this.comboBoxJenisKelamin.Location = new System.Drawing.Point(175, 210);
-            this.comboBoxJenisKelamin.Name = "comboBoxJenisKelamin";
-            this.comboBoxJenisKelamin.Size = new System.Drawing.Size(554, 24);
-            this.comboBoxJenisKelamin.TabIndex = 43;
             // 
             // label6
             // 
@@ -215,19 +200,79 @@
             this.buttonCheckIn.UseVisualStyleBackColor = true;
             this.buttonCheckIn.Click += new System.EventHandler(this.buttonCheckIn_Click);
             // 
+            // radioButtonLaki
+            // 
+            this.radioButtonLaki.AutoSize = true;
+            this.radioButtonLaki.Location = new System.Drawing.Point(175, 210);
+            this.radioButtonLaki.Name = "radioButtonLaki";
+            this.radioButtonLaki.Size = new System.Drawing.Size(68, 17);
+            this.radioButtonLaki.TabIndex = 51;
+            this.radioButtonLaki.TabStop = true;
+            this.radioButtonLaki.Text = "Laki-Laki";
+            this.radioButtonLaki.UseVisualStyleBackColor = true;
+            this.radioButtonLaki.CheckedChanged += new System.EventHandler(this.radioButtonLaki_CheckedChanged);
+            // 
+            // radioButtonPere
+            // 
+            this.radioButtonPere.AutoSize = true;
+            this.radioButtonPere.Location = new System.Drawing.Point(344, 210);
+            this.radioButtonPere.Name = "radioButtonPere";
+            this.radioButtonPere.Size = new System.Drawing.Size(79, 17);
+            this.radioButtonPere.TabIndex = 52;
+            this.radioButtonPere.TabStop = true;
+            this.radioButtonPere.Text = "Perempuan";
+            this.radioButtonPere.UseVisualStyleBackColor = true;
+            this.radioButtonPere.CheckedChanged += new System.EventHandler(this.radioButtonPere_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(175, 252);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.TabIndex = 53;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(344, 252);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(85, 17);
+            this.radioButton2.TabIndex = 54;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(491, 252);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(85, 17);
+            this.radioButton3.TabIndex = 55;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "radioButton3";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
             // controlCheckIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonPere);
+            this.Controls.Add(this.radioButtonLaki);
             this.Controls.Add(this.buttonCheckIn);
             this.Controls.Add(this.textBoxNoKmr);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.comboBoxJenisKmr);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBoxJenisKelamin);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxNoTelp);
             this.Controls.Add(this.label8);
@@ -252,9 +297,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBoxJenisKmr;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBoxJenisKelamin;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxNoTelp;
         private System.Windows.Forms.Label label8;
@@ -265,5 +308,10 @@
         private System.Windows.Forms.TextBox textBoxNoKtp;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonCheckIn;
+        private System.Windows.Forms.RadioButton radioButtonLaki;
+        private System.Windows.Forms.RadioButton radioButtonPere;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }

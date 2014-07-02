@@ -22,8 +22,6 @@ namespace KELOMPOK8
         {
             InitializeComponent();
         }
-
-<<<<<<< HEAD
         private void resetForm()
         {
             textBoxNama.Text = "";
@@ -217,12 +215,5 @@ namespace KELOMPOK8
 
 
         }
-
-=======
-        private void buttonTambah_Click(object sender, EventArgs e)
-        {
-
-        }
->>>>>>> origin/master
     }
 }
