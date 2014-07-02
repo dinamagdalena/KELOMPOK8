@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFO));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonLogout = new System.Windows.Forms.Button();
@@ -35,14 +36,16 @@
             this.buttonCheckIn = new System.Windows.Forms.Button();
             this.labelSelamatDatang = new System.Windows.Forms.Label();
             this.flowLayoutPanelBackOffice = new System.Windows.Forms.FlowLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.34805F));
@@ -125,13 +128,38 @@
             this.flowLayoutPanelBackOffice.TabIndex = 2;
             this.flowLayoutPanelBackOffice.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelBackOffice_Paint);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(301, 116);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(195, 22);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "No Telp. 022- 7312456";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(301, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(254, 24);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Jalan Jeruk Mandarin No 321";
+            // 
             // FormFO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KELOMPOK8.Properties.Resources.Background3;
             this.ClientSize = new System.Drawing.Size(1008, 688);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1500, 900);
             this.MinimumSize = new System.Drawing.Size(1024, 726);
             this.Name = "FormFO";
@@ -140,6 +168,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -152,5 +181,7 @@
         private System.Windows.Forms.Button buttonCheckIn;
         private System.Windows.Forms.Label labelSelamatDatang;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelBackOffice;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
