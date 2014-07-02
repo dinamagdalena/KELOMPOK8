@@ -13,7 +13,7 @@ namespace KELOMPOK8
 {
     public partial class controlFasilitasHotel : UserControl
     {
-        private string Id;
+       // private string Id;
         string strConnection = ConfigurationManager.ConnectionStrings["DbHotelConnectionString"].ConnectionString;
         public controlFasilitasHotel()
         {
@@ -140,13 +140,12 @@ namespace KELOMPOK8
                 connection.Open();
 
                 // buat Insert Sql Query Statement
-                string insert = "UPDATE tfasilitashotel SET idfasilitashotel = @idfasilitashotel, namafasilitashotel = @namafasilitashotel, hargafasilitashotel = @hargafasilitashotel WHERE idfasilitas = @id";
+                string insert = "UPDATE tfasilitashotel SET idfasilitashotel = @idfasilitashotel, namafasilitashotel = @namafasilitashotel, hargafasilitashotel = @hargafasilitashotel WHERE idfasilitashotel = @idfasilitashotel";
 
                 // Insert Data kedalam Table
                 SqlCommand cmd = new SqlCommand(insert, connection);
 
                 // tambahkan Parameter kedalam Cmd
-                cmd.Parameters.AddWithValue("@id", Id);
                 cmd.Parameters.AddWithValue("@idfasilitashotel", IdFasilitasHotel);
                 cmd.Parameters.AddWithValue("@namafasilitashotel", NamaFasilitasHotel);
                 cmd.Parameters.AddWithValue("@hargafasilitashotel", HargaFasilitasHotel);
@@ -193,13 +192,13 @@ namespace KELOMPOK8
                 connection.Open();
 
                 // buat Insert Sql Query Statement
-                string insert = "DELETE FROM tfasilitashotel WHERE idfasilitas = @id";
+                string insert = "DELETE FROM tfasilitashotel WHERE idfasilitashotel = @idfasilitashotel";
 
                 // Insert Data kedalam Table
                 SqlCommand cmd = new SqlCommand(insert, connection);
 
                 // tambhakan Parameter kedalam Cmd
-                cmd.Parameters.AddWithValue("@id", Id);
+                cmd.Parameters.AddWithValue("@idfasilitashotel", IdFasilitasHotel);
 
                 // execute Data
                 int insertResult = cmd.ExecuteNonQuery();
