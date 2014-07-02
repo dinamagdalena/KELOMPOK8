@@ -21,5 +21,10 @@ namespace KELOMPOK8
         {
             this.Close();
         }
+
+        private void flowLayoutPanelBackOffice_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -122,13 +122,14 @@
             this.flowLayoutPanelBackOffice.Name = "flowLayoutPanelBackOffice";
             this.flowLayoutPanelBackOffice.Size = new System.Drawing.Size(807, 508);
             this.flowLayoutPanelBackOffice.TabIndex = 2;
+            this.flowLayoutPanelBackOffice.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelBackOffice_Paint);
             // 
             // FormFO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KELOMPOK8.Properties.Resources.Background3;
-            this.ClientSize = new System.Drawing.Size(1008, 687);
+            this.ClientSize = new System.Drawing.Size(1008, 688);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximumSize = new System.Drawing.Size(1500, 900);
             this.MinimumSize = new System.Drawing.Size(1024, 726);
