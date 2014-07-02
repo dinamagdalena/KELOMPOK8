@@ -41,6 +41,7 @@ namespace KELOMPOK8
                     fa = new FormAdmin();
                     
                     fa.Show();
+                    this.Hide();
                 }
                 else if (status == "BackOffice")
                 {
@@ -77,6 +78,11 @@ namespace KELOMPOK8
         private void radioButtonFO_CheckedChanged(object sender, EventArgs e)
         {
             status = (sender as RadioButton).Text;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }

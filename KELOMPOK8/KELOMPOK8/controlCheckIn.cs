@@ -68,7 +68,7 @@ namespace KELOMPOK8
                 connection.Open();
 
                 //create Query
-                string insert = "INSERT INTO TPelanggan (NoKtp, NamaPelanggan, NoTelpPelanggan, JenisKelaminPelanggan) values(@NoKtp, @NamaPelanggan, @NoTelpPelanggan, @JenisKelaminPelanggan) ";
+                string insert = "INSERT INTO TPelanggan (noktp, nama, notelp , jenis_kelamin) values(@NoKtp, @NamaPelanggan, @NoTelpPelanggan, @JenisKelaminPelanggan) ";
 
                 //Isnert Data Into table
                 SqlCommand cmd = new SqlCommand(insert, connection);
@@ -80,18 +80,19 @@ namespace KELOMPOK8
                 cmd.Parameters.AddWithValue("@JenisKelaminPelanggan", jenis_kelamin);
 
                 // Execute Data
-                int insertResult = cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
                 //Checking insert result
-                if (insertResult == 1)
-                {
-                    MessageBox.Show("Check In Berhasil");
-                    ClearForm();
-                }
-                else
-                {
-                    MessageBox.Show("Check in gagal silahkan ulangi");
-                }
+                //if (insertResult == 1)
+                //{
+                  //  MessageBox.Show("Check In Berhasil");
+                   // ClearForm();
+                //}
+                //else
+                //{
+                  //  MessageBox.Show("Check in gagal silahkan ulangi");
+                //}
+                ClearForm();
 
                 
 

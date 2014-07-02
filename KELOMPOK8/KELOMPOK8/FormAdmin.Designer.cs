@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelLogin = new System.Windows.Forms.Label();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonDataKaryawan = new System.Windows.Forms.Button();
             this.buttonDataLogin = new System.Windows.Forms.Button();
@@ -61,6 +63,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel2.Controls.Add(this.labelLogin);
             this.panel2.Controls.Add(this.buttonLogout);
             this.panel2.Controls.Add(this.buttonDataKaryawan);
             this.panel2.Controls.Add(this.buttonDataLogin);
@@ -70,6 +73,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(188, 508);
             this.panel2.TabIndex = 1;
+            // 
+            // labelLogin
+            // 
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogin.Location = new System.Drawing.Point(71, 71);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(46, 17);
+            this.labelLogin.TabIndex = 0;
+            this.labelLogin.Text = "label1";
             // 
             // buttonLogout
             // 
@@ -87,7 +100,7 @@
             // 
             this.buttonDataKaryawan.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonDataKaryawan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDataKaryawan.Location = new System.Drawing.Point(34, 178);
+            this.buttonDataKaryawan.Location = new System.Drawing.Point(34, 104);
             this.buttonDataKaryawan.Name = "buttonDataKaryawan";
             this.buttonDataKaryawan.Size = new System.Drawing.Size(118, 41);
             this.buttonDataKaryawan.TabIndex = 2;
@@ -99,7 +112,7 @@
             // 
             this.buttonDataLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonDataLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDataLogin.Location = new System.Drawing.Point(34, 110);
+            this.buttonDataLogin.Location = new System.Drawing.Point(34, 176);
             this.buttonDataLogin.Name = "buttonDataLogin";
             this.buttonDataLogin.Size = new System.Drawing.Size(118, 41);
             this.buttonDataLogin.TabIndex = 1;
@@ -112,7 +125,7 @@
             this.labelSelamatDatang.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelSelamatDatang.AutoSize = true;
             this.labelSelamatDatang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSelamatDatang.Location = new System.Drawing.Point(39, 41);
+            this.labelSelamatDatang.Location = new System.Drawing.Point(38, 41);
             this.labelSelamatDatang.Name = "labelSelamatDatang";
             this.labelSelamatDatang.Size = new System.Drawing.Size(113, 17);
             this.labelSelamatDatang.TabIndex = 0;
@@ -145,9 +158,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(310, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(243, 24);
+            this.label4.Size = new System.Drawing.Size(254, 24);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Jalan Solokan Jeruk No 321";
+            this.label4.Text = "Jalan Jeruk Mandarin No 321";
             // 
             // FormAdmin
             // 
@@ -158,6 +171,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1500, 900);
             this.MinimumSize = new System.Drawing.Size(1024, 726);
             this.Name = "FormAdmin";
@@ -182,5 +196,6 @@
         private System.Windows.Forms.FlowLayoutPanel contentLayoutAdmin;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelLogin;
     }
 }
