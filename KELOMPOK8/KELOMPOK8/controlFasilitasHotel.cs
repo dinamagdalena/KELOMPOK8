@@ -27,33 +27,18 @@ namespace KELOMPOK8
         private void BindDataBase()
         {
             SqlConnection conn = new SqlConnection(strConn);
-
             using (conn)
             {
-                //open the gate
                 conn.Open();
-                
-                //membuat perintah sql
                 string select = "SELECT * FROM tfasilitashotel";
-
-                //select data
                 SqlCommand cmd = new SqlCommand(select, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
-
-                //load reader into table 
                 DataTable table = new DataTable();
                 table.Load(reader);
-
-                //bind data table ke data grid view
                 dataGVFasilitasHotel.DataSource = table;
                 dataGVFasilitasHotel.ClearSelection();
-
-                //reset form
                 resetForm();
-
-                //close the gate
                 conn.Close();
-
             }
         }
        
@@ -146,7 +131,7 @@ namespace KELOMPOK8
         private void buttonHapus_Click(object sender, EventArgs e)
         {
             string nama = textBoxNamaFasilitasHotel.Text;
-            string fasilitas = textBoxIdFasilitasHotel.Text;
+            string idfasilitashotel = textBoxIdFasilitasHotel.Text;
             string judul = "Pesan Konfirmasi";
             string pesan = "Anda Yakin Akan Menghapus Id Fasilitas " + nama.Trim() + " ?";
             DialogResult result = MessageBox.Show(pesan, judul, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
@@ -171,7 +156,7 @@ namespace KELOMPOK8
                 SqlCommand cmd = new SqlCommand(insert, conn);
 
                 // tambhakan Parameter kedalam Cmd
-                cmd.Parameters.AddWithValue("@idfasilitaskamar",fasilitas);
+                cmd.Parameters.AddWithValue("@idfasilitaskamar",idfasilitashotel);
 
                 // execute Data
                 cmd.ExecuteNonQuery();

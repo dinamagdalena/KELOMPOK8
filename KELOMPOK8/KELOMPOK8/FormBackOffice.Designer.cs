@@ -36,11 +36,8 @@
             this.buttonDataKategoriKamar = new System.Windows.Forms.Button();
             this.buttonDataKamar = new System.Windows.Forms.Button();
             this.labelSelamatDatang = new System.Windows.Forms.Label();
-
             this.contentLayoutBackOffice = new System.Windows.Forms.FlowLayoutPanel();
-
             this.contentLayoutPanelBackOffice = new System.Windows.Forms.FlowLayoutPanel();
-
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -54,15 +51,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.34805F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.65195F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
-
             this.tableLayoutPanel1.Controls.Add(this.contentLayoutBackOffice, 1, 0);
-
             this.tableLayoutPanel1.Controls.Add(this.contentLayoutPanelBackOffice, 1, 0);
-
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 171);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1007, 514);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
@@ -78,7 +73,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(188, 508);
+            this.panel2.Size = new System.Drawing.Size(188, 488);
             this.panel2.TabIndex = 1;
             // 
             // buttonDataFasilitasHotel
@@ -91,6 +86,7 @@
             this.buttonDataFasilitasHotel.TabIndex = 3;
             this.buttonDataFasilitasHotel.Text = "Data Fasilitas Hotel";
             this.buttonDataFasilitasHotel.UseVisualStyleBackColor = true;
+            this.buttonDataFasilitasHotel.Click += new System.EventHandler(this.buttonDataFasilitasHotel_Click);
             // 
             // buttonDataFasilitasKamar
             // 
@@ -151,25 +147,23 @@
             this.labelSelamatDatang.TabIndex = 0;
             this.labelSelamatDatang.Text = "Selamat Datang,";
             // 
-
             // contentLayoutBackOffice
             // 
             this.contentLayoutBackOffice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.contentLayoutBackOffice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentLayoutBackOffice.Location = new System.Drawing.Point(197, 3);
             this.contentLayoutBackOffice.Name = "contentLayoutBackOffice";
-            this.contentLayoutBackOffice.Size = new System.Drawing.Size(807, 508);
+            this.contentLayoutBackOffice.Size = new System.Drawing.Size(807, 488);
             this.contentLayoutBackOffice.TabIndex = 2;
-
+            // 
             // contentLayoutPanelBackOffice
             // 
             this.contentLayoutPanelBackOffice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.contentLayoutPanelBackOffice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentLayoutPanelBackOffice.Location = new System.Drawing.Point(197, 3);
+            this.contentLayoutPanelBackOffice.Location = new System.Drawing.Point(3, 497);
             this.contentLayoutPanelBackOffice.Name = "contentLayoutPanelBackOffice";
-            this.contentLayoutPanelBackOffice.Size = new System.Drawing.Size(807, 508);
+            this.contentLayoutPanelBackOffice.Size = new System.Drawing.Size(188, 14);
             this.contentLayoutPanelBackOffice.TabIndex = 2;
-
             // 
             // FormBackOffice
             // 
