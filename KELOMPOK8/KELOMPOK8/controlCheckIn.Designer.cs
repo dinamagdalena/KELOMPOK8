@@ -46,9 +46,10 @@
             this.buttonCheckIn = new System.Windows.Forms.Button();
             this.radioButtonLaki = new System.Windows.Forms.RadioButton();
             this.radioButtonPere = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonStd = new System.Windows.Forms.RadioButton();
+            this.radioButtonSpr = new System.Windows.Forms.RadioButton();
+            this.radioButtonDlx = new System.Windows.Forms.RadioButton();
+            this.radioButtonPrs = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -224,47 +225,63 @@
             this.radioButtonPere.UseVisualStyleBackColor = true;
             this.radioButtonPere.CheckedChanged += new System.EventHandler(this.radioButtonPere_CheckedChanged);
             // 
-            // radioButton1
+            // radioButtonStd
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(175, 252);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 53;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonStd.AutoSize = true;
+            this.radioButtonStd.Location = new System.Drawing.Point(175, 252);
+            this.radioButtonStd.Name = "radioButtonStd";
+            this.radioButtonStd.Size = new System.Drawing.Size(99, 17);
+            this.radioButtonStd.TabIndex = 53;
+            this.radioButtonStd.TabStop = true;
+            this.radioButtonStd.Text = "Standard Room";
+            this.radioButtonStd.UseVisualStyleBackColor = true;
+            this.radioButtonStd.CheckedChanged += new System.EventHandler(this.radioButtonStd_CheckedChanged);
             // 
-            // radioButton2
+            // radioButtonSpr
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(344, 252);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 54;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonSpr.AutoSize = true;
+            this.radioButtonSpr.Location = new System.Drawing.Point(344, 252);
+            this.radioButtonSpr.Name = "radioButtonSpr";
+            this.radioButtonSpr.Size = new System.Drawing.Size(95, 17);
+            this.radioButtonSpr.TabIndex = 54;
+            this.radioButtonSpr.TabStop = true;
+            this.radioButtonSpr.Text = "Superior Room";
+            this.radioButtonSpr.UseVisualStyleBackColor = true;
+            this.radioButtonSpr.CheckedChanged += new System.EventHandler(this.radioButtonSpr_CheckedChanged);
             // 
-            // radioButton3
+            // radioButtonDlx
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(491, 252);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 55;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonDlx.AutoSize = true;
+            this.radioButtonDlx.Location = new System.Drawing.Point(483, 252);
+            this.radioButtonDlx.Name = "radioButtonDlx";
+            this.radioButtonDlx.Size = new System.Drawing.Size(89, 17);
+            this.radioButtonDlx.TabIndex = 55;
+            this.radioButtonDlx.TabStop = true;
+            this.radioButtonDlx.Text = "Deluxe Room";
+            this.radioButtonDlx.UseVisualStyleBackColor = true;
+            this.radioButtonDlx.CheckedChanged += new System.EventHandler(this.radioButtonDlx_CheckedChanged);
+            // 
+            // radioButtonPrs
+            // 
+            this.radioButtonPrs.AutoSize = true;
+            this.radioButtonPrs.Location = new System.Drawing.Point(619, 252);
+            this.radioButtonPrs.Name = "radioButtonPrs";
+            this.radioButtonPrs.Size = new System.Drawing.Size(110, 17);
+            this.radioButtonPrs.TabIndex = 56;
+            this.radioButtonPrs.TabStop = true;
+            this.radioButtonPrs.Text = "Presidential Room";
+            this.radioButtonPrs.UseVisualStyleBackColor = true;
+            this.radioButtonPrs.CheckedChanged += new System.EventHandler(this.radioButtonPrs_CheckedChanged);
             // 
             // controlCheckIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonPrs);
+            this.Controls.Add(this.radioButtonDlx);
+            this.Controls.Add(this.radioButtonSpr);
+            this.Controls.Add(this.radioButtonStd);
             this.Controls.Add(this.radioButtonPere);
             this.Controls.Add(this.radioButtonLaki);
             this.Controls.Add(this.buttonCheckIn);
@@ -310,8 +327,9 @@
         private System.Windows.Forms.Button buttonCheckIn;
         private System.Windows.Forms.RadioButton radioButtonLaki;
         private System.Windows.Forms.RadioButton radioButtonPere;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButtonStd;
+        private System.Windows.Forms.RadioButton radioButtonSpr;
+        private System.Windows.Forms.RadioButton radioButtonDlx;
+        private System.Windows.Forms.RadioButton radioButtonPrs;
     }
 }

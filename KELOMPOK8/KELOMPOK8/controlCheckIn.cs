@@ -20,6 +20,7 @@ namespace KELOMPOK8
         private string notelp;
         private string jenis_kelamin;
         private string no_kmr;
+        private int Id_kategori;
 
         public controlCheckIn()
         {
@@ -44,6 +45,26 @@ namespace KELOMPOK8
         private void radioButtonPere_CheckedChanged(object sender, EventArgs e)
         {
             jenis_kelamin = (sender as RadioButton).Text;
+        }
+
+        private void radioButtonStd_CheckedChanged(object sender, EventArgs e)
+        {
+            Id_kategori = 1;
+        }
+
+        private void radioButtonSpr_CheckedChanged(object sender, EventArgs e)
+        {
+            Id_kategori = 2;
+        }
+
+        private void radioButtonDlx_CheckedChanged(object sender, EventArgs e)
+        {
+            Id_kategori = 3;
+        }
+
+        private void radioButtonPrs_CheckedChanged(object sender, EventArgs e)
+        {
+            Id_kategori = 4;
         }
 
         private void buttonCheckIn_Click(object sender, EventArgs e)
