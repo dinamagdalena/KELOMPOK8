@@ -12,6 +12,7 @@ namespace KELOMPOK8
     public partial class FormBackOffice : Form
     {
         private UserControl content;
+
         public FormBackOffice()
         {
             InitializeComponent();
@@ -23,10 +24,23 @@ namespace KELOMPOK8
             this.Close();
         }
 
+
+        private void buttonDataKamar_Click(object sender, EventArgs e)
+        {
+            content = new controlKamar();
+            contentLayoutBackOffice.Controls.Add(content);
+        }
+
         private void buttonDataFasilitasKamar_Click(object sender, EventArgs e)
         {
             content = new controlFasilitasHotel();
             contentLayoutPanelBackOffice.Controls.Add(content);   
+        }
+
+        private void buttonDataKategoriKamar_Click(object sender, EventArgs e)
+        {
+            content = new controlKategoriKamar();
+            contentLayoutPanelBackOffice.Controls.Add(content);
         }
     }
 }

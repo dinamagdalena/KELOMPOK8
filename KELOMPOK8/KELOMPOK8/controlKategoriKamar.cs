@@ -46,7 +46,7 @@ namespace KELOMPOK8
                 connection.Open();
 
                 // Create String Sql Statement
-                string select = "SELECT * FROM tfasilitaskamar";
+                string select = "SELECT * FROM tkategori";
 
                 // Select Data
                 SqlCommand cmd = new SqlCommand(select, connection);
