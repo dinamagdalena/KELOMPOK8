@@ -150,13 +150,13 @@ namespace KELOMPOK8
                 conn.Open();
 
                 // buat Insert Sql Query Statement
-                string insert = "DELETE FROM tfasilitashotel WHERE idfasilitashotel = @IdFasilitashHotel";
+                string insert = "DELETE FROM tfasilitashotel WHERE idfasilitashotel = @IdFasilitasHotel";
 
                 // Insert Data kedalam Table
                 SqlCommand cmd = new SqlCommand(insert, conn);
 
                 // tambhakan Parameter kedalam Cmd
-                cmd.Parameters.AddWithValue("@idfasilitaskamar",idfasilitashotel);
+                cmd.Parameters.AddWithValue("@IdFasilitasHotel",idfasilitashotel);
 
                 // execute Data
                 cmd.ExecuteNonQuery();
