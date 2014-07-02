@@ -139,7 +139,6 @@
             this.radioButtonAdmin.Name = "radioButtonAdmin";
             this.radioButtonAdmin.Size = new System.Drawing.Size(97, 19);
             this.radioButtonAdmin.TabIndex = 8;
-            this.radioButtonAdmin.TabStop = true;
             this.radioButtonAdmin.Text = "Administrator";
             this.radioButtonAdmin.UseVisualStyleBackColor = false;
             this.radioButtonAdmin.CheckedChanged += new System.EventHandler(this.radioButtonAdmin_CheckedChanged);
@@ -153,7 +152,6 @@
             this.radioButtonBO.Name = "radioButtonBO";
             this.radioButtonBO.Size = new System.Drawing.Size(83, 19);
             this.radioButtonBO.TabIndex = 9;
-            this.radioButtonBO.TabStop = true;
             this.radioButtonBO.Text = "BackOffice";
             this.radioButtonBO.UseVisualStyleBackColor = false;
             this.radioButtonBO.CheckedChanged += new System.EventHandler(this.radioButtonBO_CheckedChanged);
@@ -167,7 +165,6 @@
             this.radioButtonFO.Name = "radioButtonFO";
             this.radioButtonFO.Size = new System.Drawing.Size(84, 19);
             this.radioButtonFO.TabIndex = 10;
-            this.radioButtonFO.TabStop = true;
             this.radioButtonFO.Text = "FrontOffice";
             this.radioButtonFO.UseVisualStyleBackColor = false;
             this.radioButtonFO.CheckedChanged += new System.EventHandler(this.radioButtonFO_CheckedChanged);
