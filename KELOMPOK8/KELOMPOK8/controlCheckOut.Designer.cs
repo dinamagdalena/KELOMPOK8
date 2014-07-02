@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxGym = new System.Windows.Forms.CheckBox();
             this.textBoxNoKmrOut = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,12 +43,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSPA = new System.Windows.Forms.CheckBox();
+            this.Therapy = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.Therapy);
+            this.groupBox1.Controls.Add(this.checkBoxSPA);
+            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.checkBoxGym);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(46, 262);
             this.groupBox1.Name = "groupBox1";
@@ -57,15 +63,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fasilitas Hotel";
             // 
-            // checkBox1
+            // checkBoxGym
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(35, 35);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(95, 21);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxGym.AutoSize = true;
+            this.checkBoxGym.Location = new System.Drawing.Point(35, 35);
+            this.checkBoxGym.Name = "checkBoxGym";
+            this.checkBoxGym.Size = new System.Drawing.Size(58, 21);
+            this.checkBoxGym.TabIndex = 2;
+            this.checkBoxGym.Text = "GYM";
+            this.checkBoxGym.UseVisualStyleBackColor = true;
             // 
             // textBoxNoKmrOut
             // 
@@ -114,6 +120,7 @@
             this.button1.TabIndex = 52;
             this.button1.Text = "Cari";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -187,6 +194,38 @@
             this.label9.TabIndex = 59;
             this.label9.Text = "No Kmr";
             // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(375, 35);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(79, 21);
+            this.checkBox2.TabIndex = 3;
+            this.checkBox2.Text = "Laundry";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSPA
+            // 
+            this.checkBoxSPA.AutoSize = true;
+            this.checkBoxSPA.Location = new System.Drawing.Point(35, 85);
+            this.checkBoxSPA.Name = "checkBoxSPA";
+            this.checkBoxSPA.Size = new System.Drawing.Size(54, 21);
+            this.checkBoxSPA.TabIndex = 4;
+            this.checkBoxSPA.Text = "SPA";
+            this.checkBoxSPA.UseVisualStyleBackColor = true;
+            // 
+            // Therapy
+            // 
+            this.Therapy.AutoSize = true;
+            this.Therapy.Checked = true;
+            this.Therapy.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Therapy.Location = new System.Drawing.Point(375, 85);
+            this.Therapy.Name = "Therapy";
+            this.Therapy.Size = new System.Drawing.Size(109, 21);
+            this.Therapy.TabIndex = 5;
+            this.Therapy.Text = "checkBoxTrp";
+            this.Therapy.UseVisualStyleBackColor = true;
+            // 
             // controlCheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,7 +257,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxGym;
         private System.Windows.Forms.TextBox textBoxNoKmrOut;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
@@ -232,5 +271,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox Therapy;
+        private System.Windows.Forms.CheckBox checkBoxSPA;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
