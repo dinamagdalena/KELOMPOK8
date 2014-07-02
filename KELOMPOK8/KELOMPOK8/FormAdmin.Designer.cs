@@ -34,21 +34,23 @@
             this.buttonDataKaryawan = new System.Windows.Forms.Button();
             this.buttonDataLogin = new System.Windows.Forms.Button();
             this.labelSelamatDatang = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.contentLayoutAdmin = new System.Windows.Forms.FlowLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.34805F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.65195F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.contentLayoutAdmin, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 172);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -79,6 +81,7 @@
             this.buttonLogout.TabIndex = 2;
             this.buttonLogout.Text = "Logout";
             this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click_1);
             // 
             // buttonDataKaryawan
             // 
@@ -90,6 +93,7 @@
             this.buttonDataKaryawan.TabIndex = 2;
             this.buttonDataKaryawan.Text = "Data Karyawan";
             this.buttonDataKaryawan.UseVisualStyleBackColor = true;
+            this.buttonDataKaryawan.Click += new System.EventHandler(this.buttonDataKaryawan_Click);
             // 
             // buttonDataLogin
             // 
@@ -114,14 +118,36 @@
             this.labelSelamatDatang.TabIndex = 0;
             this.labelSelamatDatang.Text = "Selamat Datang,";
             // 
-            // flowLayoutPanel1
+            // contentLayoutAdmin
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(197, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(807, 508);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.contentLayoutAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.contentLayoutAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentLayoutAdmin.Location = new System.Drawing.Point(197, 3);
+            this.contentLayoutAdmin.Name = "contentLayoutAdmin";
+            this.contentLayoutAdmin.Size = new System.Drawing.Size(807, 508);
+            this.contentLayoutAdmin.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(310, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(195, 22);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "No Telp. 022- 7312456";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(310, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(243, 24);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Jalan Solokan Jeruk No 321";
             // 
             // FormAdmin
             // 
@@ -129,6 +155,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KELOMPOK8.Properties.Resources.Background3;
             this.ClientSize = new System.Drawing.Size(1008, 687);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximumSize = new System.Drawing.Size(1500, 900);
             this.MinimumSize = new System.Drawing.Size(1024, 726);
@@ -139,6 +167,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -150,6 +179,8 @@
         private System.Windows.Forms.Button buttonDataKaryawan;
         private System.Windows.Forms.Button buttonDataLogin;
         private System.Windows.Forms.Label labelSelamatDatang;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel contentLayoutAdmin;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

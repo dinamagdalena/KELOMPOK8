@@ -11,14 +11,29 @@ namespace KELOMPOK8
 {
     public partial class FormAdmin : Form
     {
+        private UserControl content;
+
         public FormAdmin()
         {
             InitializeComponent();
+            
         }
 
         private void buttonDataLogin_Click(object sender, EventArgs e)
         {
+            content = new controlLogin();
+            contentLayoutAdmin.Controls.Add(content);
+        }
 
+        private void buttonDataKaryawan_Click(object sender, EventArgs e)
+        {
+            content = new controlKaryawan();
+            contentLayoutAdmin.Controls.Add(content);
+        }
+
+        private void buttonLogout_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

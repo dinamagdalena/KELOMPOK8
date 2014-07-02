@@ -34,6 +34,11 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.radioButtonAdmin = new System.Windows.Forms.RadioButton();
+            this.radioButtonBO = new System.Windows.Forms.RadioButton();
+            this.radioButtonFO = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +79,7 @@
             // 
             this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.Location = new System.Drawing.Point(388, 406);
+            this.textBoxPassword.Location = new System.Drawing.Point(388, 386);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(236, 27);
             this.textBoxPassword.TabIndex = 4;
@@ -85,7 +90,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(384, 378);
+            this.label3.Location = new System.Drawing.Point(384, 361);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 22);
             this.label3.TabIndex = 3;
@@ -95,13 +100,77 @@
             // 
             this.buttonLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(431, 476);
+            this.buttonLogin.Location = new System.Drawing.Point(431, 459);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(147, 53);
             this.buttonLogin.TabIndex = 5;
             this.buttonLogin.Text = "LOGIN";
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(314, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(243, 24);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Jalan Solokan Jeruk No 321";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(314, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(195, 22);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "No Telp. 022- 7312456";
+            // 
+            // radioButtonAdmin
+            // 
+            this.radioButtonAdmin.AutoSize = true;
+            this.radioButtonAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonAdmin.Location = new System.Drawing.Point(345, 427);
+            this.radioButtonAdmin.Name = "radioButtonAdmin";
+            this.radioButtonAdmin.Size = new System.Drawing.Size(97, 19);
+            this.radioButtonAdmin.TabIndex = 8;
+            this.radioButtonAdmin.TabStop = true;
+            this.radioButtonAdmin.Text = "Administrator";
+            this.radioButtonAdmin.UseVisualStyleBackColor = false;
+            this.radioButtonAdmin.CheckedChanged += new System.EventHandler(this.radioButtonAdmin_CheckedChanged);
+            // 
+            // radioButtonBO
+            // 
+            this.radioButtonBO.AutoSize = true;
+            this.radioButtonBO.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonBO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonBO.Location = new System.Drawing.Point(460, 427);
+            this.radioButtonBO.Name = "radioButtonBO";
+            this.radioButtonBO.Size = new System.Drawing.Size(83, 19);
+            this.radioButtonBO.TabIndex = 9;
+            this.radioButtonBO.TabStop = true;
+            this.radioButtonBO.Text = "BackOffice";
+            this.radioButtonBO.UseVisualStyleBackColor = false;
+            this.radioButtonBO.CheckedChanged += new System.EventHandler(this.radioButtonBO_CheckedChanged);
+            // 
+            // radioButtonFO
+            // 
+            this.radioButtonFO.AutoSize = true;
+            this.radioButtonFO.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonFO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonFO.Location = new System.Drawing.Point(563, 427);
+            this.radioButtonFO.Name = "radioButtonFO";
+            this.radioButtonFO.Size = new System.Drawing.Size(84, 19);
+            this.radioButtonFO.TabIndex = 10;
+            this.radioButtonFO.TabStop = true;
+            this.radioButtonFO.Text = "FrontOffice";
+            this.radioButtonFO.UseVisualStyleBackColor = false;
+            this.radioButtonFO.CheckedChanged += new System.EventHandler(this.radioButtonFO_CheckedChanged);
             // 
             // FormLogin
             // 
@@ -111,6 +180,11 @@
             this.BackgroundImage = global::KELOMPOK8.Properties.Resources.Background3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1008, 687);
+            this.Controls.Add(this.radioButtonFO);
+            this.Controls.Add(this.radioButtonBO);
+            this.Controls.Add(this.radioButtonAdmin);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.label3);
@@ -121,7 +195,7 @@
             this.MinimumSize = new System.Drawing.Size(1024, 726);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Form Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +209,11 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton radioButtonAdmin;
+        private System.Windows.Forms.RadioButton radioButtonBO;
+        private System.Windows.Forms.RadioButton radioButtonFO;
     }
 }
 

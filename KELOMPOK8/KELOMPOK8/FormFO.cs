@@ -14,6 +14,12 @@ namespace KELOMPOK8
         public FormFO()
         {
             InitializeComponent();
+            
+        }
+
+        private void buttonLogout_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
