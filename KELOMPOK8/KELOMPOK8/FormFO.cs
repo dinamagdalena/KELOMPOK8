@@ -24,14 +24,29 @@ namespace KELOMPOK8
             this.Close();
         }
 
+<<<<<<< HEAD
+=======
+        private void flowLayoutPanelBackOffice_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+>>>>>>> origin/master
         private void buttonCheckOut_Click(object sender, EventArgs e)
         {
+            if (content != null) content.Dispose(); 
+            
             content = new controlCheckOut();
             flowLayoutPanelBackOffice.Controls.Add(content);
         }
 
         private void buttonCheckIn_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+            if (content != null) content.Dispose();
+            
+>>>>>>> origin/master
             content = new controlCheckIn();
             flowLayoutPanelBackOffice.Controls.Add(content);   
         }

@@ -15,10 +15,10 @@ namespace KELOMPOK8
     {
         //create connertion string 
         private string strConnection = ConfigurationManager.ConnectionStrings["DbHotelConnectionString"].ConnectionString;
-        private string noktp;
-        private string nama;
-        private string notelp;
-        private string jenis_kelamin;
+        private string NoKTP;
+        private string NamaPelanggan;
+        private string NoTelpPelanggan;
+        private string JenisKelaminPelanggan;
         private string no_kmr;
         private int Id_kategori;
 
@@ -39,39 +39,26 @@ namespace KELOMPOK8
 
         private void radioButtonLaki_CheckedChanged(object sender, EventArgs e)
         {
-            jenis_kelamin = (sender as RadioButton).Text;
+            JenisKelaminPelanggan = (sender as RadioButton).Text;
         }
 
         private void radioButtonPere_CheckedChanged(object sender, EventArgs e)
         {
-            jenis_kelamin = (sender as RadioButton).Text;
+            JenisKelaminPelanggan = (sender as RadioButton).Text;
         }
 
-        private void radioButtonStd_CheckedChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Id_kategori = 1;
-        }
-
-        private void radioButtonSpr_CheckedChanged(object sender, EventArgs e)
-        {
-            Id_kategori = 2;
-        }
-
-        private void radioButtonDlx_CheckedChanged(object sender, EventArgs e)
-        {
-            Id_kategori = 3;
-        }
-
-        private void radioButtonPrs_CheckedChanged(object sender, EventArgs e)
-        {
-            Id_kategori = 4;
+            string kategori = (sender as ComboBox).Text;
+            //if (kategori == "Superior")
+           // { Id_kategori = }
         }
 
         private void buttonCheckIn_Click(object sender, EventArgs e)
         {
-            noktp = textBoxNoKtp.Text;
-            nama = textBoxNamaIn.Text;
-            notelp = textBoxNoTelp.Text;
+            NoKTP = textBoxNoKtp.Text;
+            NamaPelanggan = textBoxNamaIn.Text;
+            NoTelpPelanggan = textBoxNoTelp.Text;
             no_kmr = textBoxNoKmr.Text;
 
             SqlConnection connection = new SqlConnection(strConnection);
@@ -81,16 +68,16 @@ namespace KELOMPOK8
                 connection.Open();
 
                 //create Query
-                string insert = "INSERT INTO TPelanggan (NoKtp, NamaPelanggan, NoTelpPelanggan, JenisKelaminPelanggan) values(@NoKtp, @NamaPelanggan, @NoTelpPelanggan, @JenisKelaminPelanggan) ";
+                string insert = "INSERT INTO TPelanggan (NoKTP, NamaPelanggan, NoTelpPelanggan, JenisKelaminPelanggan) values(@NoKTP, @NamaPelanggan, @NoTelpPelanggan, @JenisKelaminPelanggan) ";
 
                 //Isnert Data Into table
                 SqlCommand cmd = new SqlCommand(insert, connection);
 
                 //Add Parameter Into CMD
-                cmd.Parameters.AddWithValue("@NoKtp", noktp);
-                cmd.Parameters.AddWithValue("@NamaPelanggan", nama);
-                cmd.Parameters.AddWithValue("@NoTelp", notelp);
-                cmd.Parameters.AddWithValue("@JenisKelaminPelanggan", jenis_kelamin);
+                cmd.Parameters.AddWithValue("@NoKTP", NoKTP);
+                cmd.Parameters.AddWithValue("@NamaPelanggan", NamaPelanggan);
+                cmd.Parameters.AddWithValue("@NoTelpPelanggan", NoTelpPelanggan);
+                cmd.Parameters.AddWithValue("@JenisKelaminPelanggan", JenisKelaminPelanggan);
 
                 // Execute Data
                 int insertResult = cmd.ExecuteNonQuery();
@@ -98,13 +85,14 @@ namespace KELOMPOK8
                 //Checking insert result
                 if (insertResult == 1)
                 {
-                    MessageBox.Show("Check In Berhasil");
-                    ClearForm();
+                   MessageBox.Show("Check In Berhasil");
+                   ClearForm();
                 }
                 else
                 {
-                    MessageBox.Show("Check in gagal silahkan ulangi");
+                   MessageBox.Show("Check in gagal silahkan ulangi");
                 }
+                
 
                 
 
@@ -114,6 +102,8 @@ namespace KELOMPOK8
             }
 
         }
+
+        
 
     }
 }
