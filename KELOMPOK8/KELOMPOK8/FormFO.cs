@@ -26,14 +26,19 @@ namespace KELOMPOK8
 
         private void flowLayoutPanelBackOffice_Paint(object sender, PaintEventArgs e)
         {
-            content = new controlCheckIn();
-            flowLayoutPanelBackOffice.Controls.Add(content);   
+           
         }
 
         private void buttonCheckOut_Click(object sender, EventArgs e)
         {
             content = new controlCheckOut();
             flowLayoutPanelBackOffice.Controls.Add(content);
+        }
+
+        private void buttonCheckIn_Click(object sender, EventArgs e)
+        {
+            content = new controlCheckIn();
+            flowLayoutPanelBackOffice.Controls.Add(content);   
         }
 
         
