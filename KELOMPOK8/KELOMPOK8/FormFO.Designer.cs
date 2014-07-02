@@ -106,6 +106,7 @@
             this.buttonCheckIn.TabIndex = 1;
             this.buttonCheckIn.Text = "Check In";
             this.buttonCheckIn.UseVisualStyleBackColor = true;
+            this.buttonCheckIn.Click += new System.EventHandler(this.buttonCheckIn_Click);
             // 
             // labelSelamatDatang
             // 
@@ -126,7 +127,7 @@
             this.flowLayoutPanelBackOffice.Name = "flowLayoutPanelBackOffice";
             this.flowLayoutPanelBackOffice.Size = new System.Drawing.Size(807, 508);
             this.flowLayoutPanelBackOffice.TabIndex = 2;
-            this.flowLayoutPanelBackOffice.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelBackOffice_Paint);
+            
             // 
             // label5
             // 
