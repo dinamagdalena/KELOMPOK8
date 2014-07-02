@@ -47,24 +47,11 @@ namespace KELOMPOK8
             jenis_kelamin = (sender as RadioButton).Text;
         }
 
-        private void radioButtonStd_CheckedChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Id_kategori = 1;
-        }
-
-        private void radioButtonSpr_CheckedChanged(object sender, EventArgs e)
-        {
-            Id_kategori = 2;
-        }
-
-        private void radioButtonDlx_CheckedChanged(object sender, EventArgs e)
-        {
-            Id_kategori = 3;
-        }
-
-        private void radioButtonPrs_CheckedChanged(object sender, EventArgs e)
-        {
-            Id_kategori = 4;
+            string kategori = (sender as ComboBox).Text;
+            //if (kategori == "Superior")
+           // { Id_kategori = }
         }
 
         private void buttonCheckIn_Click(object sender, EventArgs e)
@@ -114,6 +101,8 @@ namespace KELOMPOK8
             }
 
         }
+
+        
 
     }
 }
