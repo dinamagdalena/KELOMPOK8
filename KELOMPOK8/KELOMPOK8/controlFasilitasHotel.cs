@@ -13,7 +13,7 @@ namespace KELOMPOK8
 {
     public partial class controlFasilitasHotel : UserControl
     {
-       private string strConn = ConfigurationManager.ConnectionStrings["DbHotelConnectionString"].ConnectionString;
+       private string strConn = ConfigurationManager.ConnectionStrings["DbHotelConnectionString"].ConnectionString; 
         public controlFasilitasHotel()
         {
             InitializeComponent();
@@ -27,33 +27,18 @@ namespace KELOMPOK8
         private void BindDataBase()
         {
             SqlConnection conn = new SqlConnection(strConn);
-
             using (conn)
             {
-                //open the gate
                 conn.Open();
-                
-                //membuat perintah sql
                 string select = "SELECT * FROM tfasilitashotel";
-
-                //select data
                 SqlCommand cmd = new SqlCommand(select, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
-
-                //load reader into table 
                 DataTable table = new DataTable();
                 table.Load(reader);
-
-                //bind data table ke data grid view
                 dataGVFasilitasHotel.DataSource = table;
                 dataGVFasilitasHotel.ClearSelection();
-
-                //reset form
                 resetForm();
-
-                //close the gate
                 conn.Close();
-
             }
         }
        
@@ -70,7 +55,7 @@ namespace KELOMPOK8
                 conn.Open();
 
                 // buat Insert Sql Query Statement
-                string insert = "INSERT INTO tfasilitashotel(idfasilitashotel, namafasilitashotel, hargafasilitashotel,) values (@IdFasilitasHotel, @NamaFasilitashotel, @HargaFasilitashotel)";
+                string insert = "INSERT INTO tfasilitashotel(idfasilitashotel, namafasilitashotel, hargafasilitashotel) values (@IdFasilitasHotel, @NamaFasilitashotel, @HargaFasilitashotel)";
 
                 // Insert Data kedalam Table
                 SqlCommand cmd = new SqlCommand(insert, conn);
@@ -145,9 +130,10 @@ namespace KELOMPOK8
 
         private void buttonHapus_Click(object sender, EventArgs e)
         {
-            string id = textBoxIdFasilitasHotel.Text;
+            string nama = textBoxNamaFasilitasHotel.Text;
+            string idfasilitashotel = textBoxIdFasilitasHotel.Text;
             string judul = "Pesan Konfirmasi";
-            string pesan = "Anda Yakin Akan Menghapus Id Fasilitas " + id.Trim() + " ?";
+            string pesan = "Anda Yakin Akan Menghapus Id Fasilitas " + nama.Trim() + " ?";
             DialogResult result = MessageBox.Show(pesan, judul, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
             // If Result == Cancel
@@ -164,13 +150,13 @@ namespace KELOMPOK8
                 conn.Open();
 
                 // buat Insert Sql Query Statement
-                string insert = "DELETE FROM tfasilitashotel WHERE idfasilitashotel = @IdFasilitashHotel";
+                string insert = "DELETE FROM tfasilitashotel WHERE idfasilitashotel = @IdFasilitasHotel";
 
                 // Insert Data kedalam Table
                 SqlCommand cmd = new SqlCommand(insert, conn);
 
                 // tambhakan Parameter kedalam Cmd
-                cmd.Parameters.AddWithValue("@IdFasilitasHotel", id);
+                cmd.Parameters.AddWithValue("@IdFasilitasHotel",idfasilitashotel);
 
                 // execute Data
                 cmd.ExecuteNonQuery();
