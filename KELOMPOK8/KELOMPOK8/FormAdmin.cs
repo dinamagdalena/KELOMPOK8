@@ -22,12 +22,14 @@ namespace KELOMPOK8
 
         private void buttonDataLogin_Click(object sender, EventArgs e)
         {
+            if (content != null) content.Dispose();
             content = new controlLogin();
             contentLayoutAdmin.Controls.Add(content);
         }
 
         private void buttonDataKaryawan_Click(object sender, EventArgs e)
         {
+            if (content != null) content.Dispose();
                 content = new controlKaryawan();
                 contentLayoutAdmin.Controls.Add(content);
         }
