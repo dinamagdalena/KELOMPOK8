@@ -61,6 +61,7 @@
             this.dataGVFasilitasHotel.Name = "dataGVFasilitasHotel";
             this.dataGVFasilitasHotel.Size = new System.Drawing.Size(414, 450);
             this.dataGVFasilitasHotel.TabIndex = 15;
+            this.dataGVFasilitasHotel.SelectionChanged += new System.EventHandler(this.dataGVFasilitasHotel_SelectionChanged);
             // 
             // textBoxHargaFasilitasHotel
             // 
@@ -167,6 +168,7 @@
             this.Controls.Add(this.dataGVFasilitasHotel);
             this.Name = "controlFasilitasHotel";
             this.Size = new System.Drawing.Size(800, 500);
+            this.Load += new System.EventHandler(this.controlFasilitasHotel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGVFasilitasHotel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
