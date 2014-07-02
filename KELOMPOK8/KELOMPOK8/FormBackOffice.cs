@@ -11,6 +11,7 @@ namespace KELOMPOK8
 {
     public partial class FormBackOffice : Form
     {
+        private UserControl content;
         public FormBackOffice()
         {
             InitializeComponent();
@@ -20,6 +21,12 @@ namespace KELOMPOK8
         private void buttonLogout_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonDataFasilitasKamar_Click(object sender, EventArgs e)
+        {
+            content = new controlFasilitasHotel();
+            contentLayoutPanelBackOffice.Controls.Add(content);   
         }
     }
 }
