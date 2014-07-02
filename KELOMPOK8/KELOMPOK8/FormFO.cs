@@ -11,10 +11,12 @@ namespace KELOMPOK8
 {
     public partial class FormFO : Form
     {
+        private UserControl content;
+
         public FormFO()
         {
             InitializeComponent();
-            
+                    
         }
 
         private void buttonLogout_Click_1(object sender, EventArgs e)
@@ -24,7 +26,16 @@ namespace KELOMPOK8
 
         private void flowLayoutPanelBackOffice_Paint(object sender, PaintEventArgs e)
         {
-
+            content = new controlCheckIn();
+            flowLayoutPanelBackOffice.Controls.Add(content);   
         }
+
+        private void buttonCheckOut_Click(object sender, EventArgs e)
+        {
+            content = new controlCheckOut();
+            flowLayoutPanelBackOffice.Controls.Add(content);
+        }
+
+        
     }
 }
