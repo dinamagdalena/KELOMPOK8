@@ -30,13 +30,8 @@
         {
             this.buttonHapus = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
-            this.buttonTambah = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGVKamar = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxNoKamar = new System.Windows.Forms.TextBox();
-            this.textBoxJenisKamar = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBoxHargaKamar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxJumlahKamar = new System.Windows.Forms.TextBox();
@@ -54,6 +49,7 @@
             this.buttonHapus.TabIndex = 14;
             this.buttonHapus.Text = "Hapus";
             this.buttonHapus.UseVisualStyleBackColor = true;
+            this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
             // 
             // buttonUpdate
             // 
@@ -65,17 +61,7 @@
             this.buttonUpdate.TabIndex = 13;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = true;
-            // 
-            // buttonTambah
-            // 
-            this.buttonTambah.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTambah.Location = new System.Drawing.Point(461, 323);
-            this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(91, 36);
-            this.buttonTambah.TabIndex = 12;
-            this.buttonTambah.Text = "Tambah";
-            this.buttonTambah.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // label1
             // 
@@ -96,38 +82,7 @@
             this.dataGVKamar.Name = "dataGVKamar";
             this.dataGVKamar.Size = new System.Drawing.Size(440, 450);
             this.dataGVKamar.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(458, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "No. Kamar";
-            // 
-            // textBoxNoKamar
-            // 
-            this.textBoxNoKamar.Location = new System.Drawing.Point(531, 149);
-            this.textBoxNoKamar.Name = "textBoxNoKamar";
-            this.textBoxNoKamar.Size = new System.Drawing.Size(69, 20);
-            this.textBoxNoKamar.TabIndex = 16;
-            // 
-            // textBoxJenisKamar
-            // 
-            this.textBoxJenisKamar.Location = new System.Drawing.Point(531, 186);
-            this.textBoxJenisKamar.Name = "textBoxJenisKamar";
-            this.textBoxJenisKamar.Size = new System.Drawing.Size(248, 20);
-            this.textBoxJenisKamar.TabIndex = 18;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(458, 189);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Jenis Kamar";
+            this.dataGVKamar.SelectionChanged += new System.EventHandler(this.dataGVKamar_SelectionChanged);
             // 
             // textBoxHargaKamar
             // 
@@ -170,13 +125,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxHargaKamar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxJenisKamar);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxNoKamar);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonHapus);
             this.Controls.Add(this.buttonUpdate);
-            this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGVKamar);
             this.Name = "controlKamar";
@@ -191,13 +141,8 @@
 
         private System.Windows.Forms.Button buttonHapus;
         private System.Windows.Forms.Button buttonUpdate;
-        private System.Windows.Forms.Button buttonTambah;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGVKamar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxNoKamar;
-        private System.Windows.Forms.TextBox textBoxJenisKamar;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxHargaKamar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxJumlahKamar;
