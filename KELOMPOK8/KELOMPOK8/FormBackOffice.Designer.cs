@@ -39,13 +39,11 @@
             this.labelSelamatDatang = new System.Windows.Forms.Label();
             this.contentLayoutBackOffice = new System.Windows.Forms.FlowLayoutPanel();
             this.contentLayoutPanelBackOffice = new System.Windows.Forms.FlowLayoutPanel();
-<<<<<<< HEAD
-=======
 
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
 
->>>>>>> origin/master
+
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -161,14 +159,12 @@
             this.contentLayoutBackOffice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentLayoutBackOffice.Location = new System.Drawing.Point(3, 497);
             this.contentLayoutBackOffice.Name = "contentLayoutBackOffice";
-<<<<<<< HEAD
+
             this.contentLayoutBackOffice.Size = new System.Drawing.Size(807, 488);
-=======
 
             this.contentLayoutBackOffice.Size = new System.Drawing.Size(188, 14);
             this.contentLayoutBackOffice.Size = new System.Drawing.Size(807, 488);
 
->>>>>>> origin/master
             this.contentLayoutBackOffice.TabIndex = 2;
             // 
             // contentLayoutPanelBackOffice
@@ -177,8 +173,6 @@
             this.contentLayoutPanelBackOffice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentLayoutPanelBackOffice.Location = new System.Drawing.Point(3, 497);
             this.contentLayoutPanelBackOffice.Name = "contentLayoutPanelBackOffice";
-<<<<<<< HEAD
-=======
 
             this.contentLayoutPanelBackOffice.Size = new System.Drawing.Size(807, 488);
             this.contentLayoutPanelBackOffice.TabIndex = 2;
@@ -205,7 +199,7 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Jalan Jeruk Mandarin No 321";
 
->>>>>>> origin/master
+
             this.contentLayoutPanelBackOffice.Size = new System.Drawing.Size(188, 14);
             this.contentLayoutPanelBackOffice.TabIndex = 2;
             // 
