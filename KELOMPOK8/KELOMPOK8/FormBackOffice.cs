@@ -39,5 +39,11 @@ namespace KELOMPOK8
             contentLayoutPanelBackOffice.Controls.Add(content);   
 >>>>>>> origin/master
         }
+
+        private void buttonDataKategoriKamar_Click(object sender, EventArgs e)
+        {
+            content = new controlKategoriKamar();
+            contentLayoutPanelBackOffice.Controls.Add(content);
+        }
     }
 }

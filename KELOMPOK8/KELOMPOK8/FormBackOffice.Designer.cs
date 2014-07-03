@@ -126,6 +126,7 @@
             this.buttonDataKategoriKamar.TabIndex = 2;
             this.buttonDataKategoriKamar.Text = "Data Kategori Kamar";
             this.buttonDataKategoriKamar.UseVisualStyleBackColor = true;
+            this.buttonDataKategoriKamar.Click += new System.EventHandler(this.buttonDataKategoriKamar_Click);
             // 
             // buttonDataKamar
             // 
