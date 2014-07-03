@@ -12,6 +12,7 @@ namespace KELOMPOK8
     public partial class FormAdmin : Form
     {
         private UserControl content;
+        FormLogin log;
 
         public FormAdmin()
         {
@@ -27,13 +28,16 @@ namespace KELOMPOK8
 
         private void buttonDataKaryawan_Click(object sender, EventArgs e)
         {
-            content = new controlKaryawan();
-            contentLayoutAdmin.Controls.Add(content);
+                content = new controlKaryawan();
+                contentLayoutAdmin.Controls.Add(content);
         }
 
         private void buttonLogout_Click_1(object sender, EventArgs e)
         {
+            log = new FormLogin();
             this.Close();
+            log.Show();
         }
+
     }
 }

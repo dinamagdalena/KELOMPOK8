@@ -33,7 +33,7 @@ namespace KELOMPOK8
 
         private void buttonDataFasilitasKamar_Click(object sender, EventArgs e)
         {
-            content = new controlFasilitasHotel();
+            content = new controlFasilitasKamar();
             contentLayoutPanelBackOffice.Controls.Add(content);   
         }
 
@@ -41,6 +41,12 @@ namespace KELOMPOK8
         {
             content = new controlKategoriKamar();
             contentLayoutPanelBackOffice.Controls.Add(content);
+        }
+
+        private void buttonDataFasilitasHotel_Click(object sender, EventArgs e)
+        {
+            content = new controlFasilitasHotel();
+            contentLayoutBackOffice.Controls.Add(content);
         }
     }
 }
