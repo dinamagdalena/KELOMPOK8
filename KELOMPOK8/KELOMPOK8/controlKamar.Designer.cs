@@ -43,7 +43,7 @@
             // 
             this.buttonHapus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHapus.Location = new System.Drawing.Point(688, 323);
+            this.buttonHapus.Location = new System.Drawing.Point(669, 107);
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(91, 36);
             this.buttonHapus.TabIndex = 14;
@@ -55,7 +55,7 @@
             // 
             this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(571, 323);
+            this.buttonUpdate.Location = new System.Drawing.Point(572, 107);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(91, 36);
             this.buttonUpdate.TabIndex = 13;
@@ -80,13 +80,13 @@
             this.dataGVKamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGVKamar.Location = new System.Drawing.Point(12, 38);
             this.dataGVKamar.Name = "dataGVKamar";
-            this.dataGVKamar.Size = new System.Drawing.Size(440, 450);
+            this.dataGVKamar.Size = new System.Drawing.Size(539, 450);
             this.dataGVKamar.TabIndex = 10;
             this.dataGVKamar.SelectionChanged += new System.EventHandler(this.dataGVKamar_SelectionChanged);
             // 
             // textBoxHargaKamar
             // 
-            this.textBoxHargaKamar.Location = new System.Drawing.Point(531, 227);
+            this.textBoxHargaKamar.Location = new System.Drawing.Point(648, 38);
             this.textBoxHargaKamar.Name = "textBoxHargaKamar";
             this.textBoxHargaKamar.Size = new System.Drawing.Size(131, 20);
             this.textBoxHargaKamar.TabIndex = 22;
@@ -94,7 +94,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(458, 230);
+            this.label5.Location = new System.Drawing.Point(568, 41);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 13);
             this.label5.TabIndex = 21;
@@ -102,7 +102,7 @@
             // 
             // textBoxJumlahKamar
             // 
-            this.textBoxJumlahKamar.Location = new System.Drawing.Point(531, 266);
+            this.textBoxJumlahKamar.Location = new System.Drawing.Point(648, 64);
             this.textBoxJumlahKamar.Name = "textBoxJumlahKamar";
             this.textBoxJumlahKamar.Size = new System.Drawing.Size(40, 20);
             this.textBoxJumlahKamar.TabIndex = 24;
@@ -110,7 +110,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(458, 269);
+            this.label6.Location = new System.Drawing.Point(569, 67);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 23;
@@ -131,6 +131,7 @@
             this.Controls.Add(this.dataGVKamar);
             this.Name = "controlKamar";
             this.Size = new System.Drawing.Size(800, 500);
+            this.Load += new System.EventHandler(this.controlKamar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGVKamar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

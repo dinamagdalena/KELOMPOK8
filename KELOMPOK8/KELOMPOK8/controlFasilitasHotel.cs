@@ -70,7 +70,7 @@ namespace KELOMPOK8
                 conn.Open();
 
                 // buat Insert Sql Query Statement
-                string insert = "INSERT INTO tfasilitashotel(idfasilitashotel, namafasilitashotel, hargafasilitashotel,) values (@IdFasilitasHotel, @NamaFasilitashotel, @HargaFasilitashotel)";
+                string insert = "INSERT INTO tfasilitashotel(idfasilitashotel, namafasilitashotel, hargafasilitashotel) values (@IdFasilitasHotel, @NamaFasilitashotel, @HargaFasilitashotel)";
 
                 // Insert Data kedalam Table
                 SqlCommand cmd = new SqlCommand(insert, conn);
