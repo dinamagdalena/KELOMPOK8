@@ -13,170 +13,141 @@ namespace KELOMPOK8
 {
     public partial class controlFasilitasHotel : UserControl
     {
-        private string Id;
-        string strConnection = ConfigurationManager.ConnectionStrings["DbHotelConnectionString"].ConnectionString;
+       private string strConn = ConfigurationManager.ConnectionStrings["DbHotelConnectionString"].ConnectionString;
         public controlFasilitasHotel()
         {
             InitializeComponent();
         }
-
-        private void ResetForm()
+        private void resetForm()
         {
             textBoxIdFasilitasHotel.Text = "";
             textBoxNamaFasilitasHotel.Text = "";
             textBoxHargaFasilitasHotel.Text = "";
-            textBoxIdFasilitasHotel.Focus();
         }
-
-        private void BindDatabase()
+        private void BindDataBase()
         {
-            // buat Sql Connection
-            SqlConnection connection = new SqlConnection(strConnection);
+            SqlConnection conn = new SqlConnection(strConn);
 
-            // Select Data menggunakan Connection
-            using (connection)
+            using (conn)
             {
-                // buka gerbang
-                connection.Open();
-
-                // buat String Sql Statement
+                //open the gate
+                conn.Open();
+                
+                //membuat perintah sql
                 string select = "SELECT * FROM tfasilitashotel";
 
-                // Select Data
-                SqlCommand cmd = new SqlCommand(select, connection);
+                //select data
+                SqlCommand cmd = new SqlCommand(select, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                // isikan Reader kedalam Table
+                //load reader into table 
                 DataTable table = new DataTable();
                 table.Load(reader);
 
-                // bind table ke Datagridview
+                //bind data table ke data grid view
                 dataGVFasilitasHotel.DataSource = table;
-
-                // clear selection In Form
                 dataGVFasilitasHotel.ClearSelection();
 
-                // reset form
-                ResetForm();
+                //reset form
+                resetForm();
+
+                //close the gate
+                conn.Close();
+
+            }
+        }
+       
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            string idfasilitashotel = textBoxIdFasilitasHotel.Text;
+            string namafasilitashotel = textBoxNamaFasilitasHotel.Text;
+            string hargafasilitashotel = textBoxHargaFasilitasHotel.Text;
+
+            SqlConnection conn = new SqlConnection(strConn);
+            using (conn)
+            {
+                // buka gerbang
+                conn.Open();
+
+                // buat Insert Sql Query Statement
+                string insert = "INSERT INTO tfasilitashotel(idfasilitashotel, namafasilitashotel, hargafasilitashotel,) values (@IdFasilitasHotel, @NamaFasilitashotel, @HargaFasilitashotel)";
+
+                // Insert Data kedalam Table
+                SqlCommand cmd = new SqlCommand(insert, conn);
+
+                // tambahkan Parameter kedalam Cmd
+                cmd.Parameters.AddWithValue("@IdFasilitasHotel", idfasilitashotel);
+                cmd.Parameters.AddWithValue("@NamaFasilitasHotel", namafasilitashotel);
+                cmd.Parameters.AddWithValue("@HargaFasilitasHotel", hargafasilitashotel);
+
+                // execute data
+                cmd.ExecuteNonQuery();
 
                 // tutup gerbang
-                connection.Close();
+                conn.Close();
+
+                // refresh
+                BindDataBase();
             }
         }
         private void controlFasilitasHotel_Load(object sender, EventArgs e)
         {
-            // Call BindDatabase Method
-            BindDatabase();
-        }
-        private void buttonTambah_Click(object sender, EventArgs e)
-        {
-            string IdFasilitasHotel = textBoxIdFasilitasHotel.Text;
-            string NamaFasilitasHotel = textBoxNamaFasilitasHotel.Text;
-            string HargaFasilitasHotel = textBoxHargaFasilitasHotel.Text;
-            
-            SqlConnection connection = new SqlConnection(strConnection);
-            using (connection)
-            {
-                // buka gerbang
-                connection.Open();
-
-                // buat Insert Sql Query Statement
-                string insert = "INSERT INTO tfasilitashotel(idfasilitashotel, namafasilitashotel, hargafasilitashotel,) values (@idfasilitashotel, @namafasilitashotel, @hargafasilitashotel)";
-
-                // Insert Data kedalam Table
-                SqlCommand cmd = new SqlCommand(insert, connection);
-
-                // tambahkan Parameter kedalam Cmd
-                cmd.Parameters.AddWithValue("@idfasilitashotel", IdFasilitasHotel);
-                cmd.Parameters.AddWithValue("@namafasilitashotel", NamaFasilitasHotel);
-                cmd.Parameters.AddWithValue("@hargafasilitashotel", HargaFasilitasHotel);
-
-                // execute data
-                int insertResult = cmd.ExecuteNonQuery();
-
-                // check Query Command
-                if (insertResult == 1)
-                {
-                    MessageBox.Show("Berhasil");
-                }
-                else
-                {
-                    MessageBox.Show("Gagal");
-                }
-
-                // tutup gerbang
-                connection.Close();
-
-                // refresh
-                BindDatabase();
-            }
+            BindDataBase();
         }
         private void dataGVFasilitasHotel_SelectionChanged(object sender, EventArgs e)
         {
-            // Detect User Selection
             foreach (DataGridViewRow row in dataGVFasilitasHotel.SelectedRows)
             {
-                string IdFasilitasHotel = row.Cells[0].Value.ToString();
-                string NamaFasilitasHotel = row.Cells[1].Value.ToString();
-                string HargaFasilitasHotel = row.Cells[2].Value.ToString();
-                //string Id_Fasilitas = row.Cells[3].Value.ToString();
+                string id = row.Cells[0].Value.ToString();
+                string nama = row.Cells[1].Value.ToString();
+                string harga = row.Cells[2].Value.ToString();
 
-                textBoxIdFasilitasHotel.Text = IdFasilitasHotel;
-                textBoxNamaFasilitasHotel.Text = NamaFasilitasHotel;
-                textBoxHargaFasilitasHotel.Text = HargaFasilitasHotel;
+                textBoxIdFasilitasHotel.Text = id;
+                textBoxNamaFasilitasHotel.Text = nama;
+                textBoxHargaFasilitasHotel.Text = harga;
+
             }
         }
 
         private void buttonUbah_Click(object sender, EventArgs e)
         {
-            string IdFasilitasHotel = textBoxIdFasilitasHotel.Text;
-            string NamaFasilitasHotel = textBoxNamaFasilitasHotel.Text;
-            string HargaFasilitasHotel = textBoxHargaFasilitasHotel.Text;
+            string idfasilitashotel = textBoxIdFasilitasHotel.Text;
+            string namafasilitashotel = textBoxNamaFasilitasHotel.Text;
+            string hargafasilitashotel = textBoxHargaFasilitasHotel.Text;
             
-            SqlConnection connection = new SqlConnection(strConnection);
-            using (connection)
+            SqlConnection conn = new SqlConnection(strConn);
+            using (conn)
             {
                 // buka gerbang
-                connection.Open();
+                conn.Open();
 
                 // buat Insert Sql Query Statement
-                string insert = "UPDATE tfasilitashotel SET idfasilitashotel = @idfasilitashotel, namafasilitashotel = @namafasilitashotel, hargafasilitashotel = @hargafasilitashotel WHERE idfasilitas = @id";
+                string insert = "UPDATE tfasilitashotel SET idfasilitashotel = @IdFasilitasHotel, namafasilitashotel = @NamaFasilitasHotel, hargafasilitashotel = @HargaFasilitasHotel WHERE idfasilitashotel = @IdFasilitasHotel";
 
                 // Insert Data kedalam Table
-                SqlCommand cmd = new SqlCommand(insert, connection);
+                SqlCommand cmd = new SqlCommand(insert, conn);
 
                 // tambahkan Parameter kedalam Cmd
-                cmd.Parameters.AddWithValue("@id", Id);
-                cmd.Parameters.AddWithValue("@idfasilitashotel", IdFasilitasHotel);
-                cmd.Parameters.AddWithValue("@namafasilitashotel", NamaFasilitasHotel);
-                cmd.Parameters.AddWithValue("@hargafasilitashotel", HargaFasilitasHotel);
+                cmd.Parameters.AddWithValue("@idfasilitashotel", idfasilitashotel);
+                cmd.Parameters.AddWithValue("@namafasilitashotel", namafasilitashotel);
+                cmd.Parameters.AddWithValue("@hargafasilitashotel", hargafasilitashotel);
 
                 // execute data
-                int insertResult = cmd.ExecuteNonQuery();
-
-                // check Query Command
-                if (insertResult == 1)
-                {
-                    MessageBox.Show("Berhasil");
-                }
-                else
-                {
-                    MessageBox.Show("Gagal");
-                }
+                cmd.ExecuteNonQuery();
 
                 // tutup gerbang
-                connection.Close();
+                conn.Close();
 
                 // refresh
-                BindDatabase();
+                BindDataBase();
             }
         }
 
         private void buttonHapus_Click(object sender, EventArgs e)
         {
-            string IdFasilitasHotel = textBoxIdFasilitasHotel.Text;
+            string id = textBoxIdFasilitasHotel.Text;
             string judul = "Pesan Konfirmasi";
-            string pesan = "Anda Yakin Akan Menghapus Id Fasilitas " + IdFasilitasHotel.Trim() + " ?";
+            string pesan = "Anda Yakin Akan Menghapus Id Fasilitas " + id.Trim() + " ?";
             DialogResult result = MessageBox.Show(pesan, judul, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
             // If Result == Cancel
@@ -186,41 +157,35 @@ namespace KELOMPOK8
                 return;
             }
 
-            SqlConnection connection = new SqlConnection(strConnection);
-            using (connection)
+            SqlConnection conn = new SqlConnection(strConn);
+            using (conn)
             {
                 // buka gerbang
-                connection.Open();
+                conn.Open();
 
                 // buat Insert Sql Query Statement
-                string insert = "DELETE FROM tfasilitashotel WHERE idfasilitas = @id";
+                string insert = "DELETE FROM tfasilitashotel WHERE idfasilitashotel = @IdFasilitashHotel";
 
                 // Insert Data kedalam Table
-                SqlCommand cmd = new SqlCommand(insert, connection);
+                SqlCommand cmd = new SqlCommand(insert, conn);
 
                 // tambhakan Parameter kedalam Cmd
-                cmd.Parameters.AddWithValue("@id", Id);
+                cmd.Parameters.AddWithValue("@IdFasilitasHotel", id);
 
                 // execute Data
-                int insertResult = cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
-                // check Query Command
-                if (insertResult == 1)
-                {
-                    MessageBox.Show("Berhasil");
-                }
-                else
-                {
-                    MessageBox.Show("Gagal");
-                }
-
+               
                 // tutup gerbang
-                connection.Close();
+                conn.Close();
 
                 // refresh
-                BindDatabase();
+                BindDataBase();
             }
         }
+        
+
+        
 
     }
 }
