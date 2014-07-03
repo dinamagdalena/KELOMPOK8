@@ -127,7 +127,7 @@
             this.flowLayoutPanelBackOffice.Name = "flowLayoutPanelBackOffice";
             this.flowLayoutPanelBackOffice.Size = new System.Drawing.Size(807, 508);
             this.flowLayoutPanelBackOffice.TabIndex = 2;
-            this.flowLayoutPanelBackOffice.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelBackOffice_Paint);
+            
             // 
             // label5
             // 

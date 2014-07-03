@@ -163,6 +163,10 @@
             this.contentLayoutBackOffice.Size = new System.Drawing.Size(807, 488);
 
             this.contentLayoutBackOffice.Size = new System.Drawing.Size(188, 14);
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/master
             this.contentLayoutBackOffice.Size = new System.Drawing.Size(807, 488);
 
             this.contentLayoutBackOffice.TabIndex = 2;
