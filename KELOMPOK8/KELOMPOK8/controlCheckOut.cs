@@ -20,7 +20,7 @@ namespace KELOMPOK8
         }
 
         private string strConnection = ConfigurationManager.ConnectionStrings["DbHotelConnectionString"].ConnectionString;
-        private List<Checkout> output = new List<Checkout>;
+        private List<Checkout> output = new List<Checkout>();
         private void buttonCheckOut_Click(object sender, EventArgs e)
         {
             //show form 
@@ -35,10 +35,11 @@ namespace KELOMPOK8
                 connection.Open();
 
                 //create Query
-                string query ="SELECT TTransaksi.NoKTP WHERE NoKmr =";
+                string query = "SELECT TTransaksi.NoKTP WHERE NoKmr =";
                 SqlCommand cmd = new SqlCommand(query, connection);
-        }
+            }
 
-       
+
+        }
     }
 }
