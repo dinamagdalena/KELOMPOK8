@@ -43,6 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
 
+
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -159,6 +160,8 @@
             this.contentLayoutBackOffice.Location = new System.Drawing.Point(3, 497);
             this.contentLayoutBackOffice.Name = "contentLayoutBackOffice";
 
+            this.contentLayoutBackOffice.Size = new System.Drawing.Size(807, 488);
+
             this.contentLayoutBackOffice.Size = new System.Drawing.Size(188, 14);
 
             this.contentLayoutBackOffice.Size = new System.Drawing.Size(807, 488);
@@ -197,9 +200,9 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Jalan Jeruk Mandarin No 321";
 
+
             this.contentLayoutPanelBackOffice.Size = new System.Drawing.Size(188, 14);
             this.contentLayoutPanelBackOffice.TabIndex = 2;
-
             // 
             // FormBackOffice
             // 

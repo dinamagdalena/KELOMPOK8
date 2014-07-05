@@ -39,7 +39,9 @@ namespace KELOMPOK8
                 conn.Open();
 
                 //membuat perintah sql
-                string select = "SELECT * FROM tkamar";
+                string select = "SELECT tkm.no_kamar, tkm.harga_kamar, tkm.jumlah_kamar, tkt.nama_kategori, tkt.fasilitas " +
+                                "FROM tkamar tkm, tkategori tkt " +
+                                " WHERE tkm.id_kategori = tkt.id_kategori";
 
                 //select data
                 SqlCommand cmd = new SqlCommand(select, conn);
@@ -62,8 +64,28 @@ namespace KELOMPOK8
             }
         }
 
-
+        private void controlKamar_Load(object sender, EventArgs e)
+        {
+            BindDataBase();
+        }
         
+
+        private void dataGVKamar_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGVKamar.SelectedRows)
+            {
+                NoKamar = row.Cells[0].Value.ToString();
+                string harga = row.Cells[1].Value.ToString();
+                string jumlah = row.Cells[2].Value.ToString();
+                string nama = row.Cells[3].Value.ToString();
+                string fasilitas = row.Cells[4].Value.ToString();
+                
+                textBoxHargaKamar.Text = harga;
+                textBoxJumlahKamar.Text = jumlah;
+                
+            }
+        }
+
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
@@ -78,16 +100,15 @@ namespace KELOMPOK8
                 conn.Open();
 
                 //membuat perintah sql
-                string insert = "UPDATE tkamar SET hargakamar = @Harga_Kamar , jumlahkamar = @Jumlah_Kamar WHERE nokamar = @No_Kamar";
+                string update = "UPDATE tkamar SET harga_kamar = @harga_kamar , jumlah_kamar = @jumlah_kamar, nama_kategori = @nama_kategori, fasilitas = @fasilitas WHERE nokamar = @no_kamar";
 
                 //insert data into table
-                SqlCommand cmd = new SqlCommand(insert, conn);
+                SqlCommand cmd = new SqlCommand(update, conn);
 
                 //add parametes into cmd
-                cmd.Parameters.AddWithValue("@No_Kamar", NoKamar);
-                //cmd.Parameters.AddWithValue("@Id_Kategori", JenisKamar);
-                cmd.Parameters.AddWithValue("@Harga_Kamar", HargaKamar);
-                cmd.Parameters.AddWithValue("@Jumlah_Kamar", JumlahKamar);
+                cmd.Parameters.AddWithValue("@no_kamar", NoKamar);
+                cmd.Parameters.AddWithValue("@harga_kamar", HargaKamar);
+                cmd.Parameters.AddWithValue("@jumlah_kamar", JumlahKamar);
 
                 //execute data
                 cmd.ExecuteNonQuery();
@@ -121,13 +142,13 @@ namespace KELOMPOK8
                 conn.Open();
 
                 //membuat perintah sql
-                string insert = "DELETE FROM tkamar WHERE nokamar = @No_Kamar";
+                string delete = "DELETE FROM tkamar WHERE no_kamar = @no_kamar";
 
                 //insert data into table
-                SqlCommand cmd = new SqlCommand(insert, conn);
+                SqlCommand cmd = new SqlCommand(delete, conn);
 
                 //add parametes to cmd
-                cmd.Parameters.AddWithValue("@No_Kamar", NoKamar);
+                cmd.Parameters.AddWithValue("@no_kamar", NoKamar);
 
                 //execute data
                 cmd.ExecuteNonQuery();
@@ -140,21 +161,7 @@ namespace KELOMPOK8
 
             }
         }
-
-        private void dataGVKamar_SelectionChanged(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow row in dataGVKamar.SelectedRows)
-            {
-                NoKamar = row.Cells[0].Value.ToString();
-                string harga = row.Cells[1].Value.ToString();
-                string jumlah = row.Cells[2].Value.ToString();
-                
-                textBoxHargaKamar.Text = harga;
-                textBoxJumlahKamar.Text = jumlah;
-                
-            }
-        }
-
-               
+ 
+                      
     }
 }

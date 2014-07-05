@@ -34,9 +34,7 @@
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonTambah = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxFasillitas = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVFasilitasKamar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,82 +55,68 @@
             this.dataGVFasilitasKamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGVFasilitasKamar.Location = new System.Drawing.Point(14, 90);
             this.dataGVFasilitasKamar.Name = "dataGVFasilitasKamar";
-            this.dataGVFasilitasKamar.Size = new System.Drawing.Size(774, 399);
+            this.dataGVFasilitasKamar.Size = new System.Drawing.Size(295, 399);
             this.dataGVFasilitasKamar.TabIndex = 10;
+            this.dataGVFasilitasKamar.SelectionChanged += new System.EventHandler(this.dataGVFasilitasKamar_SelectionChanged);
             // 
             // buttonHapus
             // 
             this.buttonHapus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHapus.Location = new System.Drawing.Point(686, 40);
+            this.buttonHapus.Location = new System.Drawing.Point(558, 141);
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(91, 36);
             this.buttonHapus.TabIndex = 17;
             this.buttonHapus.Text = "Hapus";
             this.buttonHapus.UseVisualStyleBackColor = true;
+            this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
             // 
             // buttonUpdate
             // 
             this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(589, 40);
+            this.buttonUpdate.Location = new System.Drawing.Point(450, 141);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(91, 36);
             this.buttonUpdate.TabIndex = 16;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonTambah
             // 
             this.buttonTambah.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTambah.Location = new System.Drawing.Point(492, 40);
+            this.buttonTambah.Location = new System.Drawing.Point(344, 141);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(91, 36);
             this.buttonTambah.TabIndex = 15;
             this.buttonTambah.Text = "Tambah";
             this.buttonTambah.UseVisualStyleBackColor = true;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(195, 59);
+            this.label2.Location = new System.Drawing.Point(341, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Fasilitas";
+            this.label2.Text = "Nama Fasilitas";
             // 
-            // label3
+            // textBoxFasillitas
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "ID Fasilitas";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(83, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 21;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(260, 56);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 20);
-            this.textBox2.TabIndex = 22;
+            this.textBoxFasillitas.Location = new System.Drawing.Point(422, 87);
+            this.textBoxFasillitas.Name = "textBoxFasillitas";
+            this.textBoxFasillitas.Size = new System.Drawing.Size(207, 20);
+            this.textBoxFasillitas.TabIndex = 22;
             // 
             // controlFasilitasKamar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBoxFasillitas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonHapus);
             this.Controls.Add(this.buttonUpdate);
@@ -141,6 +125,7 @@
             this.Controls.Add(this.dataGVFasilitasKamar);
             this.Name = "controlFasilitasKamar";
             this.Size = new System.Drawing.Size(800, 500);
+            this.Load += new System.EventHandler(this.controlFasilitasKamar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGVFasilitasKamar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,8 +140,6 @@
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonTambah;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxFasillitas;
     }
 }
